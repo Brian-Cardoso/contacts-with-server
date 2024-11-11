@@ -1,0 +1,247 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+body,
+h2,
+p,
+h1 {
+  margin: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  background-image: url(/fondo.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: light-dark(white, rgb(37, 36, 36));
+}
+
+#main-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  max-width: 90rem;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+#main-form {
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  display: flex;
+  border: 1px solid rgb(107, 105, 105);
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 0 5px 3px rgb(5, 24, 88);
+  background-color: light-dark(white, rgb(37, 36, 36));
+}
+
+.main-form-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.main-form-input-container>label {
+  font-weight: 500;
+}
+
+.form-input {
+  outline: 1px solid gray;
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+}
+
+.main-form-helper-text {
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+
+#main-form-btn {
+  background-image: url(/logo.png);
+  background-color: #4338ca;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  box-shadow: 4px 4px 5px 0 rgb(24, 24, 24);
+}
+
+#main-form-btn:hover {
+  background-color: #2d2586;
+  transition: all 0.2s ease-in
+}
+
+#contacts-list {
+  margin: 0;
+  padding: 0.5rem;
+  list-style: none;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 0.375rem;
+  border: 1px solid rgb(107, 105, 105);
+  background-color: light-dark(white, rgb(37, 36, 36));
+  box-shadow: 0 0 5px 3px rgb(5, 24, 88);
+}
+
+.edit-btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.375rem;
+  border: 1px solid gray;
+  cursor: pointer;
+  box-shadow: 4px 4px 5px 0;
+}
+
+
+.edit-btn:hover {
+  box-shadow: 4px 4px 5px 0 rgb(24, 24, 24);
+  color: white;
+  border: 1px solid rgb(172, 164, 164);
+  background-color: rgb(172, 164, 164);
+  transition: all 0.2s ease-in;
+}
+
+.edit-btn:active {
+  background-color: rgb(133, 127, 127);
+  border: 1px rgb(133, 127, 127);
+  transition: all 0.05s;
+}
+
+.delete-btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.375rem;
+  border: 1px solid gray;
+  cursor: pointer;
+  box-shadow: 4px 4px 5px 0;
+}
+
+.delete-btn:hover {
+  box-shadow: 4px 4px 5px 0 rgb(24, 24, 24);
+  color: white;
+  border: 1px solid red;
+  background-color: red;
+  transition: all 0.2s;
+}
+
+.delete-btn:active {
+  background-color: rgb(151, 10, 10);
+  border: 1px rgb(151, 10, 10);
+  transition: all 0.05s;
+}
+
+.inputs-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  flex-grow: 1;
+}
+
+.inputs-container>input {
+  width: 100%;
+  outline: 1px solid gray;
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+}
+
+.btns-container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.contacts-list-item {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.valid {
+  outline: 1px solid green;
+}
+
+.invalid {
+  outline: 1px solid red;
+}
+
+.invalidEdit {
+  border: 1px solid red;
+}
+
+.validEdit {
+  border: 1px solid green;
+}
+
+#main-form-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.invalidText {
+  color: red;
+}
+
+#cerrar-btn {
+  background-color: #4338ca;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  box-shadow: 4px 4px 5px 0 rgb(24, 24, 24);
+}
+
+@media (min-width: 768px) {
+  #main-form {
+    width: 70%;
+  }
+
+  #contacts-list {
+    width: 70%;
+  }
+
+  .inputs-container {
+    flex-wrap: nowrap;
+  }
+
+  #main-container {
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  #main-form {
+    width: 50%;
+  }
+
+  #contacts-list {
+    width: 50%;
+  }
+
+}

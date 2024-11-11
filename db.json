@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": "fdb5",
+      "username": "hola123"
+    },
+    {
+      "id": "c03d",
+      "username": "awa1"
+    },
+    {
+      "id": "13ec",
+      "username": "aa"
+    }
+  ],
+  "todos": [
+    {
+      "id": "2ed9",
+      "name": "Gabriel Gar",
+      "phone": "04242017303",
+      "user": "awa1"
+    },
+    {
+      "id": "4f5d",
+      "name": "Gabriel Gar",
+      "phone": "04242017303",
+      "user": "awa1"
+    }
+  ]
+}
